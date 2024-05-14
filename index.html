@@ -1,0 +1,102 @@
+<!--This will be the user interface/website-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dice Roll</title>
+
+    <style>
+      body {
+        font-family: sans-serif;
+        background-color: blanchedalmond;
+      }
+
+      .title {
+        text-align: center;
+        padding: 20px;
+      }
+      .subTitle {
+        text-align: center;
+        font-size: 20px;
+        padding: 20px;
+        display: block;
+      }
+
+      .inputForm {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        font-size: 20px;
+      }
+      input[type="number"] {
+        width: 25%;
+        padding: 10px 10px;
+        margin: 20px 0;
+        box-sizing: border-box;
+        font-size: 20px;
+      }
+
+      .rollButton {
+        width: 25%;
+        background-color: white;
+        padding: 10px;
+        margin: 20px, 0px;
+        font-size: 20px;
+        border: 1px black solid;
+        cursor: pointer;
+      }
+
+      .resultContainer {
+        text-align: center;
+        margin-top: 40px;
+        margin-bottom: 20px;
+        font-size: 20px;
+      }
+
+      #result {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100px;
+        height: 50px;
+        background-color: white;
+      }
+    </style>
+
+    <script src="./diceRoll.js"></script>>
+      /*
+      function diceRoll() {
+        let maxSide = document.getElementById("numSides").value;
+        let minSide = 1;
+        let resultSide = generateRandomNumInRange(maxSide, minSide);
+        document.getElementById("result").innerText = resultSide;
+      }
+
+      //separate out the randon number generator to be able to use the function elsewhere
+      function generateRandomNumInRange(maxSide, minSide){
+        return Math.floor(Math.random() * (maxSide - minSide + 1)) + minSide;
+      }
+      */
+    </script>
+  </head>
+
+  <body>
+    <div class="title"><h1>May the Odds be Ever in Your Favour!</h1></div>
+
+    <div class="inputForm">
+      <form>
+        <label for="numSides">How many sides does your dice have?</label><br />
+        <input type="number" id="numSides" /><br />
+        <button type="button" class="rollButton" onclick="diceRoll()">
+          Roll!</button
+        ><br />
+      </form>
+    </div>
+    <div class="resultContainer">
+      The dice landed on:
+      <div id="result"></div>
+    </div>
+  </body>
+</html>
