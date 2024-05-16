@@ -44,28 +44,62 @@
         padding: 10px;
         margin: 20px, 0px;
         font-size: 20px;
-        border: 1px black solid;
+        border: 1px rgb(59, 59, 59) solid;
         cursor: pointer;
+        transition-duration: 0.4s;
       }
 
-      .resultContainer {
+      .rollButton:hover {
+        background-color: black;
+        color: white;
+      }
+
+      .content {
+        display: flex;
+        justify-content: center;
         text-align: center;
         margin-top: 40px;
-        margin-bottom: 20px;
+        margin-bottom: 0px;
         font-size: 20px;
       }
 
-      #result {
+      .resultContainer {
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        margin: 20px 10px; 
+        font-size: 20px;
+      }
+
+      #result{
         display: flex;
         justify-content: center;
         align-items: center;
-        width: 100px;
+        width: 60px;
         height: 50px;
+        margin:0px 10px;
         background-color: white;
+      }
+
+      #error{
+        text-align: center;
+        font-size: 15px;
+        display: block;
+        color:red;
+      }
+
+      .footer{
+        position: fixed;
+        left:0;
+        bottom:0;
+        width:100%;
+        text-align:center;
+        margin:20px;
+        font-size: 15px;
       }
     </style>
 
-    <script src="./diceRoll.js"></script>>
+    <script src="./diceRoll.js"></script>
   </head>
 
   <body>
@@ -74,15 +108,27 @@
     <div class="inputForm">
       <form>
         <label for="numSides">How many sides does your dice have?</label><br />
-        <input type="number" id="numSides" /><br />
-        <button type="button" class="rollButton" onclick="diceRoll()">
-          Roll!</button
-        ><br />
+        <input type="number" id="numSides" min="2" />
+        <!--<button type="button" class="rollButton" onclick="diceRoll()"> Roll!</button>-->
+        <input type="button" class="rollButton" value="Roll!" onclick="diceRoll()">
+        <br />
       </form>
+      
     </div>
+    <div id="error"></div>
+    <div class="content">The dice landed on:</div>
     <div class="resultContainer">
-      The dice landed on:
       <div id="result"></div>
+      <div id="resultDice"></div>
+    </div>
+
+    <div class="footer">
+      <p>DevTechInc Ltd.</p>
     </div>
   </body>
 </html>
+
+<!--Unit test for random generator: 
+Confirm that number is within the range:
+result >= min && result <=max
+-->
