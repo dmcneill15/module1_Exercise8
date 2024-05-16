@@ -1,0 +1,21 @@
+{
+  "dependencies": {
+    "chai": "^5.1.1",
+    "mocha": "^10.4.0"
+  },
+  "name": "module1_exercise8",
+  "description": "Dice Project",
+  "version": "1.0.0",
+  "main": "diceRoll.js",
+  "type":"module",
+  "directories": {
+    "test": "test"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "mocha"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

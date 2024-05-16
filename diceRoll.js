@@ -12,6 +12,6 @@ function diceRoll() {
 }
 
 //separate out the randon number generator to be able to use the function elsewhere
-function generateRandomNumInRange(maxSide, minSide) {
+export function generateRandomNumInRange(maxSide, minSide) {
   return Math.floor(Math.random() * (maxSide - minSide + 1)) + minSide;
 }

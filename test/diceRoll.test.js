@@ -1,4 +1,6 @@
 //need to import Chai and Mocha npm packages to allow these test functions to run
+import{expect} from "chai";
+import{generateRandomNumInRange} from "../diceRoll.js"
 
 it("should generate a number greater than or equal to the minimum", ()=>{
     const result = generateRandomNumInRange(2,6);
