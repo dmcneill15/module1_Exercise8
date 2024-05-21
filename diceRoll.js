@@ -12,6 +12,8 @@ function diceRoll() {
 }
 
 //separate out the randon number generator to be able to use the function elsewhere
-export function generateRandomNumInRange(maxSide, minSide) {
+ function generateRandomNumInRange(maxSide, minSide) {
   return Math.floor(Math.random() * (maxSide - minSide + 1)) + minSide;
 }
+
+//Question: adding export stops the functionality of the function when live?

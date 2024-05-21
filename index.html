@@ -67,36 +67,48 @@
         display: flex;
         justify-content: center;
         text-align: center;
-        margin: 20px 10px; 
+        margin: 20px 10px;
         font-size: 20px;
       }
 
-      #result{
+      #result {
         display: flex;
         justify-content: center;
         align-items: center;
         width: 60px;
         height: 50px;
-        margin:0px 10px;
+        margin: 0px 10px;
         background-color: white;
       }
 
-      #error{
+      #error {
         text-align: center;
         font-size: 15px;
         display: block;
-        color:red;
+        color: red;
       }
 
-      .footer{
+      .footer {
         position: fixed;
-        left:0;
-        bottom:0;
-        width:100%;
-        text-align:center;
-        margin:20px;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        text-align: center;
+        margin: 20px;
         font-size: 15px;
       }
+
+      .dicePic {
+        display: flex;
+        justify-content: center;
+      }
+
+      img {
+        width: 50%;
+        height: auto;
+      }
+
+
     </style>
 
     <script src="./diceRoll.js"></script>
@@ -110,17 +122,25 @@
         <label for="numSides">How many sides does your dice have?</label><br />
         <input type="number" id="numSides" min="2" />
         <!--<button type="button" class="rollButton" onclick="diceRoll()"> Roll!</button>-->
-        <input type="button" class="rollButton" value="Roll!" onclick="diceRoll()">
+        <input
+          type="button"
+          class="rollButton"
+          value="Roll!"
+          onclick="diceRoll()"
+        />
         <br />
       </form>
-      
     </div>
     <div id="error"></div>
     <div class="content">The dice landed on:</div>
     <div class="resultContainer">
-      <div id="result"></div>
-      <div id="resultDice"></div>
+      <div id="result"></div>   
     </div>
+
+    <div class="dicePic">
+      <img src="dice2.png" />
+    </div>
+
 
     <div class="footer">
       <p>DevTechInc Ltd.</p>
@@ -131,4 +151,6 @@
 <!--Unit test for random generator: 
 Confirm that number is within the range:
 result >= min && result <=max
+
+
 -->
